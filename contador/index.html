@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Increment/Decrement</title>
+</head>
+<body>
+   
+    <button id="decrement">-</button> <div id="result">0</div>  <button id="increment">+</button><button class="reset">RESET</button>
+   
+  
+
+    <script>
+        let contador = 0;
+        const resultDiv = document.querySelector("#result");
+        const incrementButton = document.querySelector("#increment");
+        const decrementButton = document.querySelector("#decrement");
+        const resetButton = document.querySelector(".reset")
+        incrementButton.addEventListener("click", function() {
+            contador++;
+            resultDiv.textContent = contador;
+        });
+
+        decrementButton.addEventListener("click", function() {
+            contador--;
+            resultDiv.textContent = contador;
+        });
+        resetButton.addEventListener("click", function() {
+            contador=0;
+            resultDiv.textContent = contador;
+        });
+    </script>
+</body>
+</html>
